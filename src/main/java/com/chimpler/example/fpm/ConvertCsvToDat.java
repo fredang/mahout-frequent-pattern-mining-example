@@ -37,7 +37,7 @@ public class ConvertCsvToDat {
 			i = 0;
 			boolean isFirstElement = true;
 			for(String token: tokens) {
-				if (token.equals("1")) {
+				if (token.trim().equals("true")) {
 					if (isFirstElement) {
 						isFirstElement = false;
 					} else {

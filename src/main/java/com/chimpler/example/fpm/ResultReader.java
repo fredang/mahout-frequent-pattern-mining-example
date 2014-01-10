@@ -102,7 +102,8 @@ public class ResultReader {
 								}
 							}
 							long otherItemOccurrence = frequency.get(otherItemId);
-							double lift = (double)occurrence / (firstFrequencyItem * otherItemOccurrence);
+
+							double lift = ((double)occurrence * transactionCount) / (firstFrequencyItem * otherItemOccurrence);
 							double conviction = (1.0 - (double)otherItemOccurrence / transactionCount) / (1.0 - confidence);
 							System.out.printf(
 								", lift=%.3f, conviction=%.3f",
